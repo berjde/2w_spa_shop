@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/order}" method="post" th:objet="${product}">
+    <div>
+        <h1 th:text="${product.name}"></h1>
+        <div th:text="${#numbers.formatInteger(product.price,0,'COMMA')}"></div>
+        <img th:src="${product.url}" th:alt="${product.name}"/>
+        <input type="hidden" th:field="*{product.id}" />
+        <div th:object="${member}">
+            <div>이름 : <input type="text" th:field="*{name} "/></div>
+            <div>전화번호(핸드폰) : <input type="text" th:field="*{phone}"/></div>
+        </div>
+        <div><input type="submit" value="구매"/></div>
+    </div>
+
+</form>
+</body>
+</html>

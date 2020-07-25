@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Getter
 @NoArgsConstructor
 public class Order extends Auditing implements Serializable {
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne
     private Member member;
     @OneToOne
     private Product product;

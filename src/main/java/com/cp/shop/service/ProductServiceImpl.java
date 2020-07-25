@@ -20,7 +20,7 @@ public class ProductServiceImpl implements ProductService {
         Optional<Product> product = productRepository.findById(id);
 
         if(product.isPresent()){
-            return this.modelMapper.map(product, ProductDTO.class);
+            return this.modelMapper.map(product.get(), ProductDTO.class);
         }
         else{
             return ProductDTO.builder().build();

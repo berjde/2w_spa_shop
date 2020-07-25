@@ -1,5 +1,6 @@
 package com.cp.shop.dto;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ProductDTO extends BaseDTO implements Serializable {
     private String name;
+
     private int price;
     private String url;
 

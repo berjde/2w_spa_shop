@@ -69,3 +69,5 @@ server:
   servlet:
     context-path: /
 
+product:
+  id: 1
